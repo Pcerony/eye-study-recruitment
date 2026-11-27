@@ -1,39 +1,58 @@
 <!doctype html>
 <html lang="ja">
-<script type="module" crossorigin src="/assets/researcher-DrpcxCAr.js"></script>
-<link rel="modulepreload" crossorigin href="/assets/schedule-CmKKEJob.js">
-<link rel="stylesheet" crossorigin href="/assets/schedule-DQlcUAFI.css">
+<script type="module" crossorigin src="/assets/researcher-egujU37u.js"></script>
+<link rel="modulepreload" crossorigin href="/assets/schedule-u2JjGLE2.js">
+<link rel="stylesheet" crossorigin href="/assets/schedule-NiUqvovb.css">
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>参加者募集 管理</title>
-<main>
-  <h1>参加者募集 管理</h1>
-  <button id="login" hidden>GitHubでログイン</button>
-  <button id="logout" hidden>ログアウト</button>
+<main class="admin-main">
+  <header class="admin-header">
+    <h1>参加者募集 管理</h1>
+    <div>
+      <button id="login" hidden>GitHubでログイン</button>
+      <button id="logout" class="btn-secondary" hidden>ログアウト</button>
+    </div>
+  </header>
   <p id="status" role="status"></p>
   <section id="dashboard" hidden>
-    <h2>予約枠</h2>
-    <form id="batch-form">
-      <div class="schedule-fields">
-        <label>開始日<input type="date" id="batch-start" required></label>
-        <label>終了日<input type="date" id="batch-end" required></label>
-        <label>定員<input type="number" id="batch-capacity" min="1" max="20" value="1" required></label>
-      </div>
-      <button type="submit">定時枠を一括追加（10:00–12:00 / 14:00–17:00）</button>
-    </form>
-    <form id="slot-form">
-      <div class="schedule-fields">
-        <label>日付<select id="start-day" required></select></label>
-        <label>時（日本時間）<select id="start-hour" required></select></label>
-        <label>分<select id="start-minute" required></select></label>
-      </div>
-      <label>定員<input type="number" id="capacity" min="1" max="20" value="1" required></label>
-      <button type="submit">予約枠を追加</button>
-    </form>
-    <ul id="slots"></ul>
-    <h2>予約</h2><ul id="bookings"></ul>
-    <h2>希望日時</h2><ul id="interests"></ul>
+    <div id="summary" class="admin-summary"></div>
+    <section class="admin-card">
+      <h2>定時枠の一括追加</h2>
+      <form id="batch-form">
+        <div class="schedule-fields three-cols">
+          <label>開始日<input type="date" id="batch-start" required></label>
+          <label>終了日<input type="date" id="batch-end" required></label>
+          <label>定員<input type="number" id="batch-capacity" min="1" max="20" value="1" required></label>
+        </div>
+        <button type="submit">一括追加（10:00–12:00 / 14:00–17:00）</button>
+      </form>
+      <details class="admin-details">
+        <summary>個別の予約枠を追加</summary>
+        <form id="slot-form">
+          <div class="schedule-fields">
+            <label>日付<select id="start-day" required></select></label>
+            <label>時（日本時間）<select id="start-hour" required></select></label>
+            <label>分<select id="start-minute" required></select></label>
+            <label>定員<input type="number" id="capacity" min="1" max="20" value="1" required></label>
+          </div>
+          <button type="submit" class="btn-secondary">予約枠を追加</button>
+        </form>
+      </details>
+    </section>
+    <section class="admin-card">
+      <h2>予約一覧</h2>
+      <ul id="bookings" class="admin-list"></ul>
+    </section>
+    <section class="admin-card">
+      <h2>予約枠一覧</h2>
+      <div id="slots" class="slot-groups"></div>
+    </section>
+    <section id="interests-section" class="admin-card" hidden>
+      <h2>希望日時（旧受付）</h2>
+      <ul id="interests" class="admin-list"></ul>
+    </section>
   </section>
 </main>
 </html>
