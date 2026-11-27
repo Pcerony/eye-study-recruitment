@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+<script type="module" crossorigin src="/assets/student-BR7n6vfW.js"></script>
+<link rel="modulepreload" crossorigin href="/assets/style-B2wj8yik.js">
+<link rel="stylesheet" crossorigin href="/assets/style-BlDxSkKz.css">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>視線計測実験 参加者募集</title>
+<main>
+  <header>
+    <select id="language" aria-label="Language">
+      <option value="ja">日本語</option>
+      <option value="zh">中文</option>
+      <option value="en">English</option>
+    </select>
+  </header>
+  <h1 data-copy="title"></h1>
+  <dl>
+    <div><dt data-copy="location"></dt><dd data-copy="venue"></dd></div>
+    <div><dt data-copy="duration"></dt><dd data-copy="minutes"></dd></div>
+    <div><dt data-copy="preparation"></dt><dd data-copy="none"></dd></div>
+    <div><dt data-copy="languages"></dt><dd data-copy="options"></dd></div>
+  </dl>
+  <nav aria-label="Registration">
+    <button type="button" id="booking" aria-pressed="true" data-copy="book"></button>
+    <button type="button" id="interest" aria-pressed="false" data-copy="interest"></button>
+  </nav>
+  <form>
+    <label id="slot-field"><span data-copy="slot"></span><select id="slots" required></select></label>
+    <label id="preference-field" hidden><span data-copy="preference"></span><textarea id="preference" maxlength="500" disabled></textarea></label>
+    <label><span data-copy="email"></span><input id="email" type="email" autocomplete="email" maxlength="254" required></label>
+    <p class="notice" data-copy="privacy"></p>
+    <button type="submit" id="submit" data-copy="submit" disabled></button>
+    <p id="status" role="status"></p>
+  </form>
+</main>
+</html>

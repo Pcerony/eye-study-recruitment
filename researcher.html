@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+<script type="module" crossorigin src="/assets/researcher-CQv25QeI.js"></script>
+<link rel="modulepreload" crossorigin href="/assets/style-B2wj8yik.js">
+<link rel="stylesheet" crossorigin href="/assets/style-BlDxSkKz.css">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>参加者募集 管理</title>
+<main>
+  <h1>参加者募集 管理</h1>
+  <button id="login" hidden>GitHubでログイン</button>
+  <button id="logout" hidden>ログアウト</button>
+  <p id="status" role="status"></p>
+  <section id="dashboard" hidden>
+    <h2>予約枠</h2>
+    <form id="slot-form">
+      <label>日時（日本時間）<input type="datetime-local" id="starts" required></label>
+      <label>定員<input type="number" id="capacity" min="1" max="20" value="1" required></label>
+      <button type="submit">予約枠を追加</button>
+    </form>
+    <ul id="slots"></ul>
+    <h2>予約</h2><ul id="bookings"></ul>
+    <h2>希望日時</h2><ul id="interests"></ul>
+  </section>
+</main>
+</html>
