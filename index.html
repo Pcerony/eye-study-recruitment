@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="ja">
-<script type="module" crossorigin src="/assets/student-KbQMJhBn.js"></script>
-<link rel="modulepreload" crossorigin href="/assets/schedule-BxGS4p8x.js">
-<link rel="stylesheet" crossorigin href="/assets/schedule-C7EqZmWo.css">
+<script type="module" crossorigin src="/assets/student-CQ4tUfDz.js"></script>
+<link rel="modulepreload" crossorigin href="/assets/schedule-B366QA6T.js">
+<link rel="stylesheet" crossorigin href="/assets/schedule-Cr34-i-h.css">
+<link rel="stylesheet" crossorigin href="/assets/student-CveviJq_.css">
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -22,17 +23,11 @@
     <div><dt data-copy="preparation"></dt><dd data-copy="none"></dd></div>
     <div><dt data-copy="languages"></dt><dd data-copy="options"></dd></div>
   </dl>
-  <nav aria-label="Registration">
-    <button type="button" id="booking" aria-pressed="true" data-copy="book"></button>
-    <button type="button" id="interest" aria-pressed="false" data-copy="interest"></button>
-  </nav>
   <form>
+    <div id="calendar"><input id="day" type="hidden"></div>
     <label id="slot-field"><span data-copy="slot"></span><select id="slots" required></select></label>
-    <fieldset id="preference-field" hidden disabled><legend data-copy="preference"></legend>
-      <div class="schedule-fields"><label><span id="day-label"></span><select id="day" required></select></label>
-      <label><span id="time-label"></span><select id="clock" required></select></label></div>
-    </fieldset>
     <label><span data-copy="email"></span><input id="email" type="email" autocomplete="email" maxlength="254" required></label>
+    <label><span id="note-label"></span><textarea id="note" maxlength="500" rows="2"></textarea></label>
     <p class="notice" data-copy="privacy"></p>
     <button type="submit" id="submit" data-copy="submit" disabled></button>
     <p id="status" role="status"></p>

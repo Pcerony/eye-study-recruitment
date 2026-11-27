@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="ja">
-<script type="module" crossorigin src="/assets/researcher-DR-074jd.js"></script>
-<link rel="modulepreload" crossorigin href="/assets/schedule-BxGS4p8x.js">
-<link rel="stylesheet" crossorigin href="/assets/schedule-C7EqZmWo.css">
+<script type="module" crossorigin src="/assets/researcher-sAylqWd4.js"></script>
+<link rel="modulepreload" crossorigin href="/assets/schedule-B366QA6T.js">
+<link rel="stylesheet" crossorigin href="/assets/schedule-Cr34-i-h.css">
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -14,6 +14,14 @@
   <p id="status" role="status"></p>
   <section id="dashboard" hidden>
     <h2>予約枠</h2>
+    <form id="batch-form">
+      <div class="schedule-fields">
+        <label>開始日<input type="date" id="batch-start" required></label>
+        <label>終了日<input type="date" id="batch-end" required></label>
+        <label>定員<input type="number" id="batch-capacity" min="1" max="20" value="1" required></label>
+      </div>
+      <button type="submit">定時枠を一括追加（10:00–12:00 / 14:00–17:00）</button>
+    </form>
     <form id="slot-form">
       <div class="schedule-fields">
         <label>日付<select id="start-day" required></select></label>
